@@ -16,7 +16,7 @@
 
 
 
-<title>Android game:Pop the Balloons | Mengxiao Li</title>
+<title>Datadase Engine | Mengxiao Li</title>
 
 
 
@@ -116,73 +116,11 @@ color="192,192,192" opacity='0.6' zIndex="-2" count="88" src="//cdn.bootcss.com/
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Android game:Pop the Balloons</h1>
+            <h1 class="post-title">Datadase Engine</h1>
             
                 <div class="post-meta">
                     
@@ -191,7 +129,7 @@ color="192,192,192" opacity='0.6' zIndex="-2" count="88" src="//cdn.bootcss.com/
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 31, 2021&nbsp;&nbsp;20:23:19</a>
+                        Date: <a href="#">February 5, 2021&nbsp;&nbsp;17:04:10</a>
                         </span>
                     
                     
@@ -207,37 +145,29 @@ color="192,192,192" opacity='0.6' zIndex="-2" count="88" src="//cdn.bootcss.com/
         </header>
 
         <div class="post-content">
-            <h3 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h3><p>This is an Android game.<br>Game starts with a random-chosen requirement of target balloons’ color and shape.</p>
-<table>
-    <tr>
-        <td ><center><img src="/image/pop_the_balloons/1.png" height="50%" width = "50%" />Target example 1</center></td>
-        <td ><center><img src="/image/pop_the_balloons/2.png" height="50%" width = "50%" />Target example 2</center></td>
-    </tr>
-
-</table>
-
-<p>Players need to pop the right balloons, one point for popping one right balloon.<br>Balloons start at the bottom of the screen and move up at different speeds.</p>
-<table>
-    <tr>
-        <td ><center><img src="/image/pop_the_balloons/3.png" height="50%" width = "50%" />Playing view</center></td>
-    </tr>
-
-</table>
-
-<p>When time’s up, there is a pop-up screen showing the total score the player gets.</p>
-<table>
-    <tr>
-        <td ><center><img src="/image/pop_the_balloons/4.png" height="50%" width = "50%" />Time's up. Pop-up screen</center></td>
-    </tr>
-
-</table>
-And the top 10 players will be listed in the **High Score List**.
-<table>
-    <tr>
-        <td ><center><img src="/image/pop_the_balloons/5.png" height="50%" width = "50%" />High Score List</center></td>
-    </tr>
-
-</table>
+            <p>This database engine (DavisBaseLite) supports the following DDL, DML, and VDL commands. All commands are terminated by a semicolon (;).<br>DDL</p>
+<ul>
+<li>SHOW TABLES – Displays a list of all tables in DavisBase.</li>
+<li>CREATE TABLE – Creates a new table schema, i.e. a new empty table.</li>
+<li>DROP TABLE table_name – Remove a table schema, and all of its contained data.</li>
+<li>Note that you do not have to implement ALTER TABLE schema change commands.</li>
+</ul>
+<p>DML</p>
+<ul>
+<li>INSERT INTO table_name [column_list] VALUES value_list – Insert a single record into a table.</li>
+<li>DELETE FROM table_name [column_list] [WHERE condition] – Delete a single record from a table.</li>
+<li>UPDATE table_name SET column_name = value [WHERE condition] – Modifies one or<br>more records in a table.</li>
+</ul>
+<p>VDL</p>
+<ul>
+<li>“SELECT-FROM-WHERE” -style query</li>
+<li>EXIT – Cleanly exits the program and saves all table information in non-volatile files to disk.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">--------------------------------------------------------------------------------<br>Welcome to DavisBaseLite<br>DavisBaseLite Version v1.0<br>©2019 Chris Irwin Davis<br><br>Type &quot;help;&quot; to display supported commands.<br>--------------------------------------------------------------------------------<br>davisql&gt; <br></code></pre></td></tr></table></figure>
+<p>help;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs plain">davisql&gt; help;<br>********************************************************************************<br>SUPPORTED COMMANDS<br>All commands below are case insensitive<br><br>	SHOW TABLES;                                               Display all the tables in the database.<br>	CREATE TABLE table_name (&lt;column_name datatype&gt; &lt;NOT NULL&#x2F;UNIQUE&gt;);   Create a new table in the database. First record should be primary key of type Int.<br>	CREATE INDEX ON table_name (&lt;column_name&gt;);       	     Create a new index for the table in the database.<br>	INSERT INTO table_name VALUES (value1,value2,..);          Insert a new record into the table. First Column is primary key which has inbuilt auto increment function.<br>	DELETE FROM TABLE table_name WHERE row_id &#x3D; key_value;     Delete a record from the table whose rowid is &lt;key_value&gt;.<br>	UPDATE table_name SET column_name &#x3D; value WHERE condition; Modifies the records in the table.<br>	SELECT * FROM table_name;                                  Display all records in the table.<br>	SELECT * FROM table_name WHERE column_name operator value; Display records in the table where the given condition is satisfied.<br>	DROP TABLE table_name;                                     Remove table data and its schema.<br>	VERSION;                                                   Show the program version.<br>	HELP;                                                      Show this help information.<br>	EXIT;                                                      Exit the program.<br><br><br>********************************************************************************<br>davisql&gt; <br></code></pre></td></tr></table></figure>
+<p>create and insert into table:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">davisql&gt; create table example (name text, age int);<br>davisql&gt; insert into example values (ohlea, 20);<br>davisql&gt; select * from example;<br>----------------------<br>rowid   |name    |age   |<br>----------------------<br>1       |ohlea   |20    |<br>davisql&gt; <br></code></pre></td></tr></table></figure>
 
         </div>
 
@@ -273,9 +203,7 @@ And the top 10 players will be listed in the **High Score List**.
                     
                         <a href="/tags/Java/"><span class="iconfont">&#xe7e5;</span> Java</a>
                     
-                        <a href="/tags/develop/"><span class="iconfont">&#xe7e5;</span> develop</a>
-                    
-                        <a href="/tags/android/"><span class="iconfont">&#xe7e5;</span> android</a>
+                        <a href="/tags/mySQL/"><span class="iconfont">&#xe7e5;</span> mySQL</a>
                     
                         
                 </span>
@@ -288,10 +216,8 @@ And the top 10 players will be listed in the **High Score List**.
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2021/02/01/hello-world/">Hello World</a>
             
-            
-            <a class="next" rel="next" href="/2020/11/30/Spring-Notes/">Spring-Notes</a>
+            <a class="next" rel="next" href="/2021/02/03/KMP/">KMP</a>
             
         </section>
 
